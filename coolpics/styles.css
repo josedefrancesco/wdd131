@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+body {
+  font-family: Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(23, 151, 194);
+}
+
+header,
+main,
+footer {
+  max-width: 1000px;
+  margin: 0 auto; 
+  padding: 1rem;
+}
+
+main {
+  background-color: #c5c4c4;
+  border: 1px solid #ccc;
+}
+
+h1 {
+  text-align: center;
+  margin: 0;
+  color: black;
+}
+
+.menu-btn {
+  display: block;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: white;
+  font-weight: bold;
+}
+
+nav {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+nav a {
+  padding: 10px;
+  color: black;
+  display: none;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #616061;
+}
+
+main h2 {
+  text-align: center;
+  font-size: 1.6rem;
+  margin: 1rem 0;
+  padding: 0;
+  background: none;
+  border: none;
+  color: black;
+}
+
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  justify-items: center;
+  padding: 1rem 0;
+}
+
+@media screen and (min-width: 900px) {
+  main {
+    max-width: none;
+    margin: 0;
+    width: 100%;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 0 0.5rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.gallery img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border: 2px solid #ccc;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  background-color: rgb(23, 151, 194);
+  padding: 1rem;
+}
+
+/* Tablet */
+@media screen and (min-width: 700px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 900px) {
+  .menu-btn {
+    display: none;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 0 0.5rem;
+    color: white;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
