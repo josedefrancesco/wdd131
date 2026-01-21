@@ -65,30 +65,12 @@ main h2 {
   color: black;
 }
 
-
 .gallery {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
   justify-items: center;
   padding: 1rem 0;
-}
-
-@media screen and (min-width: 900px) {
-  main {
-    max-width: none;
-    margin: 0;
-    width: 100%;
-  }
-
-  nav a {
-    display: inline-block;
-    margin: 0 0.5rem;
-  }
-
-  .gallery {
-    grid-template-columns: repeat(3, 1fr);
-  }
 }
 
 .gallery img {
@@ -115,6 +97,12 @@ footer {
 
 /* Desktop */
 @media screen and (min-width: 900px) {
+  main {
+    max-width: none;
+    margin: 0;
+    width: 100%;
+  }
+
   .menu-btn {
     display: none;
   }
