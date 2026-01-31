@@ -9,8 +9,8 @@
 <body>
   <header>
     <h1>Cool Pics 📷</h1>
-    <button class="menu-btn">Menu</button>
-    <nav>
+    <button id="menu-btn" class="menu-btn">Menu</button>
+    <nav id="menu">
       <a href="#">Home</a>
       <a href="#">Profile</a>
       <a href="#">Pics</a>
@@ -37,5 +37,10 @@
   <footer>
     <p>&copy; 2026 Cool Pics</p>
   </footer>
+  <div id="modal" class="modal hidden">
+  <span id="close-btn" class="close">&times;</span>
+  <img id="modal-img" alt="Expanded image">
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
