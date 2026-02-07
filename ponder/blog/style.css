@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #ffffff;
+  color: rgb(43, 14, 56);
+  padding: 1rem;
+}
+
+header h1 {
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.header-line {
+  border: none;
+  height: 3px;
+  background-color: rgb(167, 114, 35);
+  margin: 0.5rem 0;
+}
+
+.meta-line {
+  border: none;
+  height: 3px;
+  background-color: rgb(167, 114, 35);
+  margin-bottom: 0.5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  color: rgb(214, 18, 18);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.metadata {
+  background-color: #eee;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.book {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.book h2 {
+  color: #af0909;
+}
+
+.book img {
+  max-width: 200px;
+  height: auto;
+  margin: 1rem 0;
+}
+
+.review-author {
+  font-style: italic;
+  color: #555;
+}
+
+footer {
+  background-color: #444;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .metadata {
+    text-align: right;
+  }
+}
+
+@media (min-width: 769px) {
+  .meta-line {
+    display: none;
+  }
+}
+@media (min-width: 769px) {
+  .metadata {
+    text-align: right;
+    border-right: 3px solid rgb(167, 114, 35);
+    padding-right: 1rem; 
+  }
+
+  .book {
+    padding-left: 1rem;
+  }
+
+  .meta-line {
+    display: none;
+  }
+}
