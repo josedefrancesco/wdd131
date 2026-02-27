@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Card - RPG</title>
+    
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="My Hero Character Card">
+    <meta property="og:description" content="Check out my custom RPG character stats!">
+    <meta property="og:url" content="https://tu-usuario.github.io/charactercard">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="My Hero Character Card">
+    
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <script src="character.js" defer></script>
+</head>
+<body>
+
+    <div class="card">
+        <img id="charImage" class="image" src="" alt="Character Image">
+        <div id="charName" class="name"></div>
+        
+        <div class="stats">
+            <p><strong>Class:</strong> <span id="charClass"></span></p>
+            <p><strong>Level:</strong> <span id="charLevel"></span></p>
+            <p><strong>Health:</strong> <span id="charHealth"></span></p>
+        </div>
+
+        <div class="buttons">
+            <button id="btnAttack">Attacked!</button>
+            <button id="btnLevel">Level Up</button>
+        </div>
+    </div>
+
+</body>
+</html>
