@@ -84,7 +84,7 @@ footer { width: 100%; padding: 40px 20px; margin-top: auto; }
 }
 .attribution a { font-size: 0.8rem; color: blue; text-decoration: none; }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 900px) {
     .recipe-card { flex-direction: row; gap: 20px; }
     .recipe-image, .recipe-info { flex: 1; }
     .description { display: block; }
