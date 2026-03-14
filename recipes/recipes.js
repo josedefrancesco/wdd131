@@ -1,4 +1,4 @@
-// 1. Datos de las recetas (Base de datos)
+// 1. DATA SOURCE:
 const recipes = [
     {
         author: 'Provo High Culinary Students',
@@ -130,17 +130,17 @@ const recipes = [
     }
 ];
 
-// 2. Selectores de elementos
+// 2. DOM ELEMENT SELECTORS: Get references to HTML elements
 const recipeContainer = document.querySelector('#recipe-container');
 const searchButton = document.querySelector('#search-button');
 const searchInput = document.querySelector('#search-input');
 
-// 3. Generador de etiquetas (Tags)
+// 3. TAG GENERATOR: Returns an HTML string for recipe categories/tags
 function tagsTemplate(tags) {
     return tags.map(tag => `<span class="category-tag">${tag}</span>`).join('');
 }
 
-// 4. Generador de estrellas (Rating)
+// 4. RATING GENERATOR: Returns HTML for star icons based on a 1-5 rating
 function ratingTemplate(rating) {
     let html = `<span class="rating" role="img" aria-label="Rating: ${rating} out of 5 stars">`;
     for (let i = 1; i <= 5; i++) {
@@ -154,7 +154,7 @@ function ratingTemplate(rating) {
     return html;
 }
 
-// 5. Plantilla HTML de la receta
+// 5. RECIPE TEMPLATE: Returns an HTML string for a recipe card, including image, name, description, tags, and rating
 function recipeTemplate(recipe) {
     return `
     <section class="recipe-card">
@@ -172,14 +172,14 @@ function recipeTemplate(recipe) {
     </section>`;
 }
 
-// 6. Función para renderizar una lista de recetas
+// 6. RENDER FUNCTION: Displays a specific list of recipes in the UI
 function renderRecipes(recipeList) {
     recipeContainer.innerHTML = ''; 
     const htmlStrings = recipeList.map(recipe => recipeTemplate(recipe));
     recipeContainer.innerHTML = htmlStrings.join('');
 }
 
-// 7. Función de filtrado y ordenamiento
+// 7. FILTER & SORT LOGIC: Filters data by query and sorts results alphabetically (A-Z)
 function filterRecipes(query) {
     const filtered = recipes.filter(recipe => {
         const lowQuery = query.toLowerCase();
@@ -190,11 +190,11 @@ function filterRecipes(query) {
         );
     });
 
-    // Ordenar alfabéticamente (A-Z) por nombre
+    // Sort alphabetically by name using localeCompare
     return filtered.sort((a, b) => a.name.localeCompare(b.name));
 }
 
-// 8. Manejador de búsqueda
+// 8. SEARCH HANDLER: Function triggered by the search event
 function searchHandler(e) {
     e.preventDefault();
     const query = searchInput.value;
@@ -202,13 +202,14 @@ function searchHandler(e) {
     renderRecipes(filteredResults);
 }
 
-// 9. Inicialización (Receta aleatoria al cargar)
+// 9. INITIALIZATION: Displays a random recipe when the page first loads
 function init() {
     const randomIndex = Math.floor(Math.random() * recipes.length);
     renderRecipes([recipes[randomIndex]]);
 }
 
-// Event Listeners
+// EVENT LISTENERS: Binding user actions to functions
 searchButton.addEventListener('click', searchHandler);
+
 
 init();
