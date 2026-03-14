@@ -190,7 +190,7 @@ function filterRecipes(query) {
         );
     });
 
-    // Sort alphabetically by name using localeCompare
+
     return filtered.sort((a, b) => a.name.localeCompare(b.name));
 }
 
