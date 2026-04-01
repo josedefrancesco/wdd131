@@ -124,3 +124,26 @@ nav a:hover {
     font-weight: bold;
     margin: 10px 0;
 }
+footer {
+    background-color: var(--secondary); /* El mismo azul del header */
+    color: rgb(8, 25, 126);
+    text-align: center;
+    padding: 40px 20px; /* Más espacio arriba y abajo para que respire */
+    margin-top: 50px;
+    border-top: 4px solid var(--primary); /* Una línea amarilla delgada para separar */
+}
+
+footer p {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.6rem; /* Letras más grandes y legibles */
+    font-weight: 500;
+    margin: 0;
+    letter-spacing: 0.02em;
+}
+
+/* Ajuste para que en celulares muy pequeños la letra no sea GIGANTE */
+@media (max-width: 480px) {
+    footer p {
+        font-size: 1rem;
+    }
+}
